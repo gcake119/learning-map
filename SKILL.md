@@ -2,415 +2,396 @@
 
 ## Purpose
 
-Turn a technical topic into an interactive learning deck that teaches through system behavior, manipulation, comparison, and design decisions rather than long-form exposition.
+Turn a topic into an interactive learning deck that teaches through observation, manipulation, comparison, simulation, and guided discovery rather than long-form exposition.
 
-Use this skill for interactive technical learning materials, especially System Design and Agent-enabled System Design topics.
+This skill is topic-agnostic. It can be used for technical subjects, science, humanities, language learning, professional training, conceptual models, processes, systems, and other subjects where interaction can make the material easier to understand.
+
+Do not assume the subject is software, AI, Agent, or System Design unless the source material or user request says so.
 
 ## Core principles
 
-1. One topic should usually become one independent interactive deck.
-2. Start from a concrete problem or design question, not a glossary term or definition.
-3. Keep one focal problem visible at a time.
-4. Prefer direct manipulation, simulation, state changes, diagrams, and comparison over explanatory paragraphs.
-5. Let the learner observe a behavior before naming the concept when practical.
-6. An interaction must change something meaningful: system state, architecture, data flow, evidence, measurement, or outcome.
+1. One focused topic should usually become one independent interactive deck.
+2. Start from a concrete question, phenomenon, task, tension, example, or situation instead of a glossary definition when the subject allows it.
+3. Keep one focal learning problem visible at a time.
+4. Prefer meaningful interaction, visual change, comparison, simulation, spatial relationships, and progressive disclosure over explanatory paragraphs.
+5. Let the learner observe or experience something before naming the concept when practical.
+6. Every interaction must serve a learning purpose. It should change what the learner can observe, compare, infer, construct, or test.
 7. Do not add interaction only for decoration.
 8. Do not use scores, locks, badges, completion gates, or game-like progression unless explicitly requested.
-9. Keep prose short. The visualization or simulation should carry most of the explanation.
-10. Use progressive disclosure instead of showing the whole conceptual model up front.
+9. Keep prose concise. Let the visual or interactive representation carry as much explanation as the subject permits.
+10. Do not reveal the entire conceptual structure up front when progressive discovery would teach it better.
+11. Preserve the source material's terminology, framing, scope, and uncertainty. Do not invent missing facts or silently replace the source with generic knowledge.
+12. The interaction format must follow the learning problem; do not force every topic into a system diagram, simulator, or the same component set.
 
 ## Default teaching rhythm
 
-Use this sequence when it fits the topic:
+A useful default is:
 
 ```text
-Problem
+Question / situation
   ↓
-Run / Observe
+Observe / explore / try
   ↓
-Failure, limitation, or design tension becomes visible
+A pattern, difference, consequence, or limitation becomes visible
   ↓
-Inspect evidence
+Inspect or compare
   ↓
-Change the design
+Change a variable, choice, arrangement, or interpretation
   ↓
-Re-run the same case
+Observe again
   ↓
-Compare results
+Explain / name the concept
   ↓
-Verify the new design
+Apply it in a different example
   ↓
-Transfer to a different case
-  ↓
-Name / summarize the design principle
+Summarize the reusable idea
 ```
 
-Do not force every deck to use every step.
+This is a pattern, not a mandatory sequence. Omit or reorder steps when the subject requires a different learning path.
 
-## System Design rule
+## Choose the learning mechanism from the subject
 
-For System Design materials, the main subject is the system.
+Before designing screens, identify what kind of understanding the learner needs.
 
-AI, LLMs, and Agents are components or implementation choices inside that system.
+### Relationship / structure
+Use:
+- interactive diagrams
+- maps of relationships
+- hierarchy exploration
+- component reveal
+- compare/contrast views
 
-Do not silently turn a System Design lesson into an Agent fundamentals lesson.
+### Process / sequence
+Use:
+- stepwise animation
+- timeline
+- flow simulation
+- state transitions
+- before/after playback
 
-Ask questions such as:
+### Cause and effect
+Use:
+- variable controls
+- scenario switching
+- simulation
+- prediction → observation
+- failure or counterexample injection
 
-- What must the system guarantee?
-- What belongs inside or outside the system boundary?
-- Which component owns this responsibility?
-- How does data or work move through the system?
-- Which work is synchronous or asynchronous?
-- What state must persist?
-- What can fail, and what happens next?
-- What may the Agent see or do?
-- Which guarantees must remain deterministic?
-- What evidence is needed to know the system behaved correctly?
-- What should be measured before redesigning the architecture?
+### Quantitative concept
+Use:
+- calculators
+- sliders
+- parameter controls
+- charts
+- proportional visualizations
+- unit/scale comparison
 
-## Agent-enabled System Design
+### Classification / distinction
+Use:
+- sorting
+- grouping
+- side-by-side examples
+- boundary cases
+- progressive counterexamples
 
-When an Agent participates in implementation:
+### Spatial concept
+Use:
+- manipulable diagrams
+- layers
+- zoom/reveal
+- labeled regions
+- transformations
 
-- distinguish Agent decisions from system guarantees;
-- distinguish model context from persistent system state;
-- keep permissions and important invariants outside prompt-only enforcement;
-- treat Agent/tool/model failures as ordinary system failure modes that architecture must contain;
-- evaluate architecture changes against quality and correctness, not only token/cost improvements;
-- Multi-Agent is one architecture option, not an automatic end state.
+### Interpretation / evidence
+Use:
+- source inspection
+- annotation
+- claim/evidence linking
+- comparison of interpretations
+- reveal of supporting details
 
-## Case library
+### Decision / trade-off
+Use:
+- scenario choices
+- consequence comparison
+- constraint changes
+- design comparison
+- what-if exploration
 
-Prefer the case that makes the current design problem easiest to see.
+### Skill / procedure
+Use:
+- guided practice
+- staged task
+- immediate state feedback
+- worked example → transfer exercise
+- reversible steps
 
-### AI customer support system
-Best for:
-- tool and permission boundaries
-- external services
-- human escalation
-- write operations
-- partial failure and recovery
+Do not use an interaction pattern merely because it is available.
 
-### Software development Agent
-Best for:
-- long-running work
-- state and checkpoints
-- context construction
-- sandbox and permissions
-- verification
-- workflow profiling
-- token attribution
-- architecture redesign
-- Multi-Agent comparisons
+## Case and example selection
 
-### Meeting work assistant
-Best for:
-- media/document pipelines
-- queues and workers
-- synchronous vs asynchronous execution
-- partial completion
-- background processing
-- scale
+Examples should expose the concept clearly.
 
-### Research assistant
-Best for:
-- retrieval
-- context
-- source evidence
-- claim tracing
-- semantic evaluation
-- observability
+When useful:
 
-### Enterprise knowledge assistant
-Best for:
-- ingestion
-- indexing
-- ACL propagation
-- freshness
-- versioning
-- source-of-truth design
+1. use one example to demonstrate the idea;
+2. use a different example or context for transfer.
 
-### Data analysis Agent
-Best for:
-- data architecture
-- query sandbox
-- semantic/metric contracts
-- resource limits
-- cost attribution
-- performance bottlenecks
-- scaling
+The transfer example should test whether the learner understood the idea rather than memorized the first example.
 
-## Case-transfer rule
-
-Whenever possible:
-
-1. teach the design issue with the case that exposes it most clearly;
-2. use a different case for the learner exercise.
-
-The transfer case should test whether the learner understood the design principle rather than memorized the first domain.
+Avoid adding many examples only to increase content volume.
 
 ## Interaction patterns
 
-Choose the smallest interaction pattern that makes the system behavior visible.
+These are reusable options, not required components.
 
-### Architecture Builder
+### Progressive Reveal
+Reveal structure, evidence, labels, or explanation only when it becomes useful.
+
+### Interactive Diagram
+Use when relationships, parts, hierarchy, or spatial arrangement are central.
+
+### Flow / Process Simulator
+Use when understanding depends on sequence, state, or movement through stages.
+
+### Variable / Parameter Explorer
+Use when changing one or more inputs makes a relationship visible.
+
+### Comparison
 Use for:
-- component responsibility
-- boundaries
-- trust boundaries
-- data/storage placement
-- architecture redesign
-
-### Flow Simulator
-Use for:
-- requests
-- jobs
-- queues
-- asynchronous work
-- pipelines
-- data movement
-
-### Failure Injection
-Use for:
-- timeout
-- crash
-- partial success
-- lost response
-- stale data
-- authorization failure
-- external dependency failure
-
-### Trace Explorer
-Use for:
-- request/job/run tracing
-- tool calls
-- source provenance
-- debugging
-- observability
-
-### Profiler
-Use for:
-- latency
-- token use
-- cost
-- throughput
-- queue depth
-- model/tool calls
-- bottleneck analysis
-
-### Design Comparison
-Use when the learner needs to compare:
 - before / after
-- single Agent / parallel tools / Multi-Agent
-- sync / async
-- prompt-only / backend enforcement
-- full history / retrieval + structured state
+- option A / option B
+- competing explanations
+- alternative designs
+- boundary cases
 
-## Optimization rule
+### Timeline
+Use for chronological change, historical development, lifecycle, or staged progression.
 
-Do not teach optimization as isolated tricks.
+### Evidence Explorer
+Use when the learner must connect claims, observations, sources, or supporting details.
 
-Prefer:
+### Scenario / Consequence Explorer
+Use when choices or conditions lead to different outcomes.
 
-```text
-MEASURE
-  ↓
-ATTRIBUTE
-  ↓
-DIAGNOSE
-  ↓
-REDESIGN
-  ↓
-RE-RUN
-  ↓
-VERIFY
-```
+### Builder / Composer
+Use when understanding improves by assembling a structure, argument, system, sequence, sentence, model, or plan.
 
-Examples of redesign targets:
+### Profiler / Measurement View
+Use when the subject involves locating where time, cost, quantity, effort, error, or another measurable resource is concentrated.
 
-- prompt
-- context construction
-- retrieval
-- persistent state
-- tool-output processing
-- deterministic validators
-- model routing
-- workflow structure
-- service boundaries
-- queue / worker architecture
-- Multi-Agent coordination
+## Explanation and terminology
 
-When token use is involved, distinguish:
-
-- call-level usage: how many input/output tokens a model call consumed;
-- workflow attribution: which step and context source caused that usage.
-
-Do not assume provider APIs expose identical usage fields.
-
-## Verification rule
-
-A cheaper, faster, or simpler design is not automatically better.
-
-Re-run the same workload or fixed evaluation set whenever possible.
-
-Compare at least the relevant subset of:
-
-- required behavior
-- correctness
-- permissions
-- evidence
-- quality
-- latency
-- token use
-- cost
-- failure behavior
-
-If quality or correctness drops, show that regression explicitly.
+- Prefer plain language before specialized terminology.
+- Introduce the formal term when the learner has enough context to understand what it names.
+- Keep necessary technical or domain-specific terminology accurate.
+- Do not simplify by changing the meaning.
+- Distinguish observed facts, teaching assumptions, interpretations, and uncertain claims.
+- Label synthetic or illustrative data clearly.
 
 ## Deck structure
 
 A deck should be independently understandable.
 
-Recommended opening:
-- a concrete engineering problem;
-- enough system context to act on it;
-- one clear action.
-
-Recommended closing:
-- the design artifact or judgment the learner has produced;
-- a concise reusable principle;
-- optionally a transfer exercise.
+A strong opening usually contains:
+- one clear question or situation;
+- only the context needed to begin;
+- one obvious action or observation.
 
 Avoid opening with:
-- a learning map;
-- a full architecture diagram;
+- a full learning map;
 - a glossary;
-- a list of all topics.
+- a complete conceptual model;
+- a long table of contents;
+- all learning objectives at once.
 
-## Design artifact
+A strong closing usually contains:
+- the structure, explanation, method, model, or judgment the learner has built;
+- a concise reusable principle;
+- optionally a transfer exercise or next question.
 
-Each deck should leave the learner with a concrete System Design output or decision, for example:
+Do not force a fixed number of screens. A screen exists because the learner needs a new observable state, action, comparison, or conceptual step.
 
-- requirements and constraints
-- component responsibility diagram
-- execution/data flow
-- Agent/tool/trust boundary
-- state/context strategy
-- failure and recovery strategy
-- data-access/governance design
-- observability design
-- verification strategy
-- profiler report and architecture redesign
+## Learning artifact
+
+When appropriate, let the learner finish with something concrete, such as:
+
+- a completed diagram
+- a model
+- a comparison
+- an annotated source
+- a timeline
+- a decision framework
+- a worked solution
+- a design
+- a classification
+- a causal explanation
+- a summary generated from the learner's interactions
+
+Not every subject needs a saved artifact.
 
 ## Visual direction
 
-The first validated reference implementation is:
+The validated reference implementation is:
 
 `gcake119/agent-system-design-learning-map`
 route: `#/deck/token-profiler`
 
-Use it as a reference for interaction rhythm and presentation behavior, not as a mandatory template.
+It demonstrates an accepted interaction rhythm and presentation-first experience. It is a reference, not a template and not a content model.
 
-Desired characteristics:
+General characteristics:
 
 - presentation-first rather than dashboard-first;
-- one dominant visual per stage;
+- one dominant learning focus per stage;
 - restrained chrome;
-- short labels and technical annotations;
-- diagrams that animate meaningful state changes;
+- concise labels;
+- visual state changes that carry meaning;
 - clear progress/navigation;
-- responsive;
+- responsive layout;
 - reduced-motion support;
-- no dense wall of cards or article-like scrolling unless the content truly requires it.
+- avoid dense card grids and article-like scrolling unless the subject genuinely requires them.
 
-Do not clone third-party branding or pixel-level visual design.
+Visual language should adapt to the subject. A history deck, language lesson, biology lesson, and software architecture lesson should not automatically look identical.
+
+Do not clone third-party branding, proprietary assets, exact typography, or pixel-level visual design.
 
 ## Workflow for creating a new deck
 
-### 1. Define the learning problem
+### 1. Ground in the source
+
+Read the supplied material or authoritative source first.
+
+Identify:
+- what the source actually teaches;
+- its terminology;
+- its organization and framing;
+- what is factual, interpretive, illustrative, or uncertain;
+- what is missing.
+
+Do not silently fill source gaps unless the user asks for expansion or outside research.
+
+### 2. Define the learning problem
+
 Write:
-- the engineering question;
-- what decision the learner should be able to make afterward;
-- the System Design artifact produced.
+- the topic;
+- the central question;
+- what the learner should understand or be able to do afterward;
+- any prerequisite knowledge;
+- the concrete learning artifact, if useful.
 
-### 2. Select cases
-Choose:
-- one explanation case;
-- one transfer case when useful.
+### 3. Identify the concept type
 
-Do not add more domains without a teaching reason.
+Decide whether the key understanding is primarily:
+- structural;
+- sequential;
+- causal;
+- quantitative;
+- classificatory;
+- spatial;
+- interpretive;
+- decision-oriented;
+- procedural;
+- or a combination.
 
-### 3. Build the interaction storyboard
+Use this to choose interactions.
+
+### 4. Select examples
+
+Choose the smallest set of examples needed to teach and transfer the concept.
+
+### 5. Build the interaction storyboard
+
 For each stage define:
 - visible question;
-- system state;
-- user action;
+- initial visible state;
+- learner action or observation;
 - visual/state transition;
-- evidence revealed;
-- concept named afterward;
-- next design tension.
+- evidence or consequence revealed;
+- concept or explanation introduced afterward;
+- reason this stage is necessary.
 
-### 4. Create deterministic teaching data
-For simulations:
-- use synthetic data unless real data is explicitly required;
+Remove stages that only repeat information.
+
+### 6. Create teaching data and assets
+
+When simulations or numbers are illustrative:
+- use synthetic data unless real data is required;
 - keep arithmetic internally consistent;
-- make failure modes reproducible;
-- label synthetic benchmarks/costs clearly.
+- label assumptions;
+- make state changes deterministic enough to teach reliably.
 
-### 5. Implement
-Keep content/model/state logic separate from view code when practical.
+When real sources, images, maps, quotations, or datasets are needed, preserve provenance and permissions.
 
-Prefer reusable primitives, but do not force every deck into one universal component.
+### 7. Implement
 
-### 6. Verify
+Separate content/data/state logic from view code when practical.
+
+Build reusable primitives where repetition is real, but do not force every deck into one universal component system.
+
+### 8. Verify behavior
+
 Check:
 - every visible control works;
-- back/restart behavior is deterministic;
-- direct route load works;
-- mobile layout works;
-- reduced-motion preserves information;
-- arithmetic/data invariants pass tests;
-- interaction changes meaningfully affect state or architecture.
+- back/restart behavior is predictable;
+- direct route/load state works;
+- responsive layout works;
+- reduced-motion preserves essential information;
+- numeric/data invariants are correct;
+- no essential concept is available only through animation or hover.
 
-### 7. Human UI review
-After automated checks, inspect:
-- does it feel like an interactive presentation?
+### 9. Review learning quality
+
+Human review should ask:
+- does the experience feel like an interactive presentation rather than a dashboard or article?
 - is there too much prose?
-- can the learner understand the main change visually?
-- is the interaction teaching or merely decorating?
-- is the engineering conclusion supported by what the learner observed?
+- can the learner see the important change?
+- does each interaction teach something?
+- is the conclusion supported by what was observed?
+- could the learner transfer the idea to another example?
+- did the implementation accidentally distort the source material?
 
-Do not treat automated UI/test success as final learning validation.
+Automated UI/test success is not final learning validation.
+
+## Optional domain overlays
+
+Domain-specific rules may be added on top of this skill when a subject needs them.
+
+Examples:
+- System Design may require architecture, failure, state, and verification reasoning.
+- Language learning may require pronunciation, grammar, context, and production practice.
+- History may require chronology, source interpretation, causality, and competing perspectives.
+- Science may require variables, models, observation, uncertainty, and experiment design.
+
+These belong in the deck specification or a domain overlay, not in the universal core of this skill.
 
 ## Anti-patterns
 
 Avoid:
 
 - one slide per learning objective;
-- huge scenario counts used as a proxy for depth;
-- card-heavy dashboards masquerading as lessons;
-- abstract forms that ask learners to type design answers before they have manipulated a system;
-- explaining everything before the interaction;
-- treating all AI components as Agents;
-- presenting Multi-Agent as inherently more advanced or better;
-- reducing System Design to prompt engineering;
-- optimizing token usage without measuring other bottlenecks;
-- accepting a lower-cost design without re-verifying quality;
-- using a single domain so heavily that the learner can succeed by memorizing the example.
+- large scenario counts used as a proxy for depth;
+- dashboards masquerading as lessons;
+- interactions that do not change understanding;
+- explaining everything before the learner can observe it;
+- using the same visual metaphor for every topic;
+- forcing every subject into a technical/system architecture frame;
+- excessive typing before the learner has enough context;
+- hiding essential information behind hover-only interaction;
+- treating a successful animation or passing UI test as proof that learning works;
+- adding domain assumptions that the source does not support.
 
 ## Reference implementation notes
 
-The Token Profiler deck established the first accepted pattern:
+The Token Profiler deck is the first validated reference for the interaction style.
 
-- independent deck;
-- run an Agent workflow;
-- inspect per-call token usage;
-- re-aggregate by context source;
-- distinguish provider usage from application-level attribution;
-- redesign state/retrieval architecture;
-- run the same workload again;
-- reject a cheaper design when verification regresses;
-- transfer to a Data Analysis Agent where the dominant cost is outside the LLM.
+It demonstrated:
+- an independent deck;
+- progressive interaction;
+- visual state change;
+- multiple views of the same underlying information;
+- learner-driven comparison;
+- redesign and re-run;
+- a transfer example;
+- presentation-first UI.
 
-Use this as evidence for the rules above, not as a requirement that every future deck contain profiling.
+These are transferable interaction lessons. Token profiling, Agent workflows, architecture redesign, and System Design are NOT requirements for future decks.
