@@ -155,6 +155,47 @@ Interaction Storyboard
 
 > 使用 learning-map 製作「___」。內容來源是 A；B 只作為圖解與互動呈現參考，不要把 B 當成教材內容來源。
 
+### 進階：Fork 教材，依自己的學習狀況調整
+
+公開教材本身應該可以直接使用，不需要安裝 `learning-map`。
+
+如果希望讓 Agent 根據自己的學習狀況持續調整教材，可以：
+
+```text
+公開教材 repo
+     ↓ Fork
+自己的教材 fork
+     ↑
+learning-map Skill
+     ↑
+private Learning Handoff
+```
+
+建議流程：
+
+1. Fork 想學的公開教材 repo。
+2. 把個人 Learning Handoff 保存在私人位置，例如 private repo。
+3. 讓 Agent 同時讀取公開方法（`learning-map`）、自己的教材 fork，以及私人 Learning Handoff。
+4. 根據實際學習回饋，在自己的 fork 增加補充案例、調整說明、改變學習路線或略過已熟悉內容。
+5. 如果修改後發現是所有學習者都可能受益的教材改善，再去除個人資訊後整理成 issue 或 PR 回饋上游教材。
+
+**不要把私人 Learning Handoff、個人學習紀錄或 Agent 對個人的暫時判斷 commit 到公開 fork。**
+
+公開 fork 應只保存教材本身的修改；個人學習紀錄繼續留在私人 Learning Handoff。
+
+這形成三層分工：
+
+```text
+learning-map              Public
+方法與陪學規則
+      ↓
+course repo / fork        Public
+教材與個人化後的教材版本
+      ↓
+Learning Handoff          Private
+個人學習紀錄與目前 Learner Path
+```
+
 ### Skill 與 Reference
 
 完整規格：`SKILL.md`
@@ -293,6 +334,47 @@ A focused topic will usually become one independent interactive deck. Multiple t
 **Presentation reference**
 
 > Use learning-map to create ___. Source A defines the content. Use B only as a visual and interaction reference, not as a subject-matter source.
+
+### Advanced: fork a course and adapt it to your learning
+
+A public course should remain independently usable without installing `learning-map`.
+
+For learner-specific adaptation, you can fork the course and combine it with the skill and a private Learning Handoff:
+
+```text
+Public course repo
+      ↓ Fork
+Your course fork
+      ↑
+learning-map Skill
+      ↑
+Private Learning Handoff
+```
+
+Suggested workflow:
+
+1. Fork the public course repository.
+2. Keep your Learning Handoff in private storage, such as a private repository.
+3. Let the Agent read `learning-map`, your course fork, and the private handoff.
+4. Adapt your fork based on actual learning feedback: add examples, revise explanations, change the learner path, or skip material you already understand.
+5. If an adaptation appears broadly useful, remove learner-specific information and contribute the generalized improvement upstream through an issue or pull request.
+
+**Do not commit private Learning Handoffs, personal learning history, or provisional Agent interpretations about the learner to a public fork.**
+
+The public fork contains course changes. Learner-specific records remain private.
+
+This creates a three-layer separation:
+
+```text
+learning-map              Public
+method and learning rules
+      ↓
+course repo / fork        Public
+course and personalized course variant
+      ↓
+Learning Handoff          Private
+personal learning history and current learner path
+```
 
 ### Skill and reference
 
