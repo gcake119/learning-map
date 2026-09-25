@@ -196,6 +196,14 @@ Learning Handoff          Private
 個人學習紀錄與目前 Learner Path
 ```
 
+### 開源與貢獻
+
+本專案採 **MIT License** 開源。你可以使用、複製、修改、合併、發布、散布、再授權或販售本專案的軟體與文件，但需保留原始 copyright 與 MIT 授權聲明。
+
+歡迎透過 issue 與 pull request 改善 `learning-map`。由於這個 repo 保存的是跨主題共用方法，單一課程內容應提交到對應 course repo；私人 Learning Handoff 與個人學習紀錄不要提交到公開 repo。
+
+詳細規則請見 `CONTRIBUTING.md`，完整授權文字請見 `LICENSE`。
+
 ### Skill 與 Reference
 
 完整規格：`SKILL.md`
@@ -375,6 +383,14 @@ course and personalized course variant
 Learning Handoff          Private
 personal learning history and current learner path
 ```
+
+### Open source and contributing
+
+This project is open source under the **MIT License**. You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies, subject to retaining the copyright and MIT permission notice.
+
+Issues and pull requests are welcome. This repository is for reusable, topic-agnostic methods; course-specific content belongs in the relevant course repository, and private Learning Handoffs or personal learning history must not be contributed publicly.
+
+See `CONTRIBUTING.md` for contribution guidance and `LICENSE` for the full license text.
 
 ### Skill and reference
 
