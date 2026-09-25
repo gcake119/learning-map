@@ -813,6 +813,122 @@ Examples:
 
 These belong in the deck specification or a domain overlay, not in the universal core of this skill.
 
+## Learning Handoff protocol
+
+Adaptive learning does not require an automated learner-scoring system.
+
+The default low-complexity approach is a **Learning Handoff**: a compact, persistent record that allows a learner to return to an Agent conversation, resume in a new conversation, or switch Agents without reconstructing the entire learning history.
+
+### Three-layer repository model
+
+When the learning workflow is maintained in repositories, prefer separating reusable public material from learner-specific private records:
+
+```text
+1. Skill / method repository        Public
+        ↓
+2. Course repository                Public
+        ↓
+3. Learner progress repository      Private
+```
+
+The storage mechanism is an implementation choice; repositories are not required by this skill. The separation of responsibilities is the important part.
+
+#### Layer 1 — Skill / method
+
+Contains reusable rules such as:
+
+- curriculum design;
+- content grounding;
+- interaction design;
+- Learning Handoff protocol.
+
+It must not contain a learner's actual progress history.
+
+#### Layer 2 — Course
+
+Contains reusable learning material:
+
+- curriculum;
+- learning objectives;
+- canonical content;
+- interactive decks;
+- exercises;
+- de-identified course improvements.
+
+It must not contain private learner history.
+
+#### Layer 3 — Learner progress
+
+Contains learner-specific state:
+
+- current position;
+- learning evidence;
+- learner feedback;
+- open questions;
+- provisional Agent interpretations;
+- learner-path adjustments;
+- next steps.
+
+This layer should use storage appropriate to the learner's privacy needs. A private repository is one supported implementation.
+
+### What to record
+
+Keep at least these concepts distinct:
+
+**Learning Evidence**
+Observable events or results: completed activities, explanations, transfer attempts, mistakes, successful applications, requests for hints, and other concrete evidence.
+
+**Learner Feedback**
+What the learner says about their own understanding, confusion, pace, depth, or goals.
+
+**Agent Working Interpretation**
+A provisional inference based on evidence and feedback. Do not present it as an objective trait or permanent fact.
+
+**Learner Path**
+The currently agreed route through the canonical curriculum, including temporary reinforcement, acceleration, deferral, or alternate examples.
+
+**Course Feedback**
+Possible issues in the reusable course discovered through learning. Keep these private until they are de-identified and reframed as course-design findings.
+
+### Prefer qualitative evidence before opaque scoring
+
+Do not require a numeric understanding score.
+
+Prefer:
+
+> In two transfer cases, the learner confused A and B.
+
+over:
+
+> Understanding: 62%.
+
+Quantitative measures may be added when their meaning and evidentiary value are clear, but convenient metrics such as time-on-screen, clicks, or raw correctness must not automatically become proxies for understanding.
+
+### Resume behavior
+
+When resuming learning:
+
+1. read the latest Learning Handoff;
+2. read the canonical course material needed for the current step;
+3. distinguish recorded evidence from provisional Agent interpretation;
+4. discuss meaningful uncertainty with the learner;
+5. continue or adjust the Learner Path;
+6. update the handoff after a meaningful learning discussion, route change, or new evidence.
+
+A current handoff should be sufficient for normal resumption. Historical session logs may exist but should not need to be reread every time.
+
+### Updating the public course
+
+If learner experience reveals a likely reusable course problem:
+
+1. record it first as Course Feedback in the private handoff;
+2. determine whether it is a learner-specific difficulty or a course-design issue;
+3. if reusable, remove learner-specific details;
+4. restate it as a general course improvement;
+5. update the public course separately.
+
+Do not publish personal learning records merely because they led to a public course improvement.
+
 ## Anti-patterns
 
 Avoid:
