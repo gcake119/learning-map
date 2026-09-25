@@ -23,6 +23,143 @@ Do not assume the subject is software, AI, Agent, or System Design unless the so
 11. Preserve the source material's terminology, framing, scope, and uncertainty. Do not invent missing facts or silently replace the source with generic knowledge.
 12. The interaction format must follow the learning problem; do not force every topic into a system diagram, simulator, or the same component set.
 
+## Curriculum planning with the Pyramid Principle
+
+Interactive design begins only after the learning structure is sufficiently clear.
+
+The skill should help the user discuss and shape the curriculum before building interactions. Use the Pyramid Principle as a reasoning aid: clarify the top-level learning outcome, group the supporting ideas or abilities beneath it, and make sure lower-level material actually supports the level above.
+
+The Pyramid Principle is a structural check, not a requirement that every subject become a rigid tree. Preserve natural learning logic such as chronology, prerequisite order, developmental sequence, narrative progression, or procedural dependency when those are more appropriate.
+
+### Determine curriculum status first
+
+At the beginning, identify which situation applies.
+
+#### Topic or rough idea only
+
+Work with the user to develop the curriculum.
+
+Start by clarifying:
+
+- What should the learner ultimately understand, explain, decide, recognize, or be able to do?
+- Who is the learner and what can they already be expected to know?
+- What is inside and outside the intended scope?
+- What central question or outcome should organize the material?
+
+Then build downward from the top-level outcome.
+
+#### Fragmented notes, sources, or content
+
+Do not immediately turn the fragments into slides.
+
+First:
+
+1. identify the likely top-level learning outcome;
+2. group related ideas;
+3. distinguish core ideas from examples, evidence, exercises, and supplementary detail;
+4. identify missing links, overlaps, and misplaced material;
+5. discuss the proposed structure with the user.
+
+#### Existing curriculum
+
+An existing curriculum is NOT automatically locked.
+
+By default:
+
+1. understand the curriculum's current organizing logic;
+2. review it with the Pyramid Principle;
+3. identify strengths, gaps, overlaps, unclear groupings, sequencing issues, and weak learning objectives;
+4. explain possible adjustments;
+5. discuss them with the user before restructuring;
+6. confirm the curriculum before moving into interaction design.
+
+Do not replace the user's curriculum merely because another organization is possible.
+
+#### Locked curriculum
+
+Only treat the curriculum as fixed when the user explicitly says to follow it as-is, not change it, skip curriculum discussion, or equivalent.
+
+In locked mode:
+
+- preserve unit structure and order;
+- preserve intended scope;
+- do not silently reorganize content;
+- still flag factual contradictions, impossible interactions, missing source material, or implementation blockers when they materially affect correctness;
+- proceed directly to learning objectives and interaction design within the fixed structure.
+
+### Build the curriculum pyramid
+
+A useful discussion sequence is:
+
+```text
+Top-level learning outcome / central question
+                ↓
+Major supporting understandings or abilities
+                ↓
+Unit-level questions
+                ↓
+Concrete learning objectives
+                ↓
+Examples / evidence / practice
+```
+
+At each level, check:
+
+- Does this item support the level above?
+- Are items at the same level meaningfully distinct?
+- Is an important supporting idea missing?
+- Is the grouping based on a real learning relationship rather than convenient categorization?
+- Does the order reflect prerequisite, chronology, process, difficulty, or another defensible learning sequence?
+- Is an example being mistaken for a core concept?
+- Is a topic label hiding the actual ability the learner needs?
+
+### Define learning objectives
+
+Do not stop at unit names such as "Authentication", "Photosynthesis", "Past Tense", or "Industrial Revolution".
+
+For each unit, define what the learner should be able to understand or do afterward.
+
+Prefer objectives such as:
+
+- distinguish A from B;
+- explain why X changes Y;
+- trace a process;
+- interpret evidence;
+- apply a rule in a new example;
+- compare alternatives under stated criteria;
+- identify a boundary case;
+- construct or revise a model;
+- perform a procedure;
+- justify a decision from evidence.
+
+Objectives should be specific enough to guide interaction design, but they do not all need separate screens.
+
+### Curriculum review questions
+
+Before confirming a curriculum, review with the user:
+
+- What is the one highest-level learning outcome?
+- Do the major sections collectively support it?
+- Are any sections primarily interesting side topics rather than necessary support?
+- Are important prerequisites missing?
+- Are two sections teaching the same underlying idea?
+- Is the sequence appropriate for how understanding develops?
+- Does every unit have a clear learning outcome?
+- Are examples and exercises placed under the concept they support?
+- Is the curriculum too broad for the intended depth or time?
+
+Present findings as discussion points and proposed adjustments, not as an automatic rewrite.
+
+### Curriculum confirmation gate
+
+Do not proceed from curriculum planning to detailed interaction storyboard as though the structure were final until one of these is true:
+
+- the user confirms the proposed curriculum;
+- the user explicitly delegates curriculum decisions;
+- the user explicitly locks an existing curriculum.
+
+Once confirmed, treat that version as the working curriculum. Later changes are allowed when the user requests them or when new evidence reveals a material problem.
+
 ## Default teaching rhythm
 
 A useful default is:
