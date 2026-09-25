@@ -1,3 +1,8 @@
+---
+name: learning-map
+description: Turn a learning topic into an interactive deck through source-grounded research, curriculum planning, canonical content, and interaction design. Use when a learner wants to plan a course or create interactive learning material.
+---
+
 # learning-map
 
 ## Purpose
