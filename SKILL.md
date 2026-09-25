@@ -160,6 +160,172 @@ Do not proceed from curriculum planning to detailed interaction storyboard as th
 
 Once confirmed, treat that version as the working curriculum. Later changes are allowed when the user requests them or when new evidence reveals a material problem.
 
+## Content design and learning copy
+
+A confirmed curriculum defines **what to teach and in what structure**. It does not yet define the actual lesson content or the words that should appear on screen.
+
+Do not jump directly from learning objectives to interaction storyboard or implementation.
+
+Use a distinct content-design phase:
+
+```text
+Confirmed curriculum
+        ↓
+Learning objectives
+        ↓
+Canonical content
+        ↓
+Content review
+        ↓
+Interaction storyboard
+        ↓
+Presentation / learning copy
+        ↓
+Implementation
+```
+
+### Canonical content
+
+Before designing the interaction for a unit, establish the stable instructional meaning that the deck must preserve.
+
+Create a compact content brief for each unit or coherent learning segment. Include the relevant subset of:
+
+- central question;
+- learning objectives;
+- core claims or conclusions;
+- explanation, reasoning chain, mechanism, or argument;
+- required terminology and definitions;
+- prerequisites;
+- examples;
+- evidence or sources;
+- misconceptions;
+- counterexamples or boundary cases;
+- uncertainty, disagreement, or limitations;
+- what the learner should be able to transfer to a new case.
+
+Not every field is required for every subject. Use only what helps define the instructional content accurately.
+
+The canonical content is the source of truth for the lesson's meaning. It may be more complete than the final on-screen copy.
+
+### Content grounding
+
+Canonical content must be grounded in the user's supplied material, agreed curriculum, and appropriate sources.
+
+When content is source-based:
+
+- preserve the source's meaning and scope;
+- distinguish source claims from added explanation;
+- do not invent missing evidence;
+- identify contradictions or uncertain material before turning it into confident teaching copy.
+
+When outside research is needed, gather it before content approval rather than silently filling gaps during implementation.
+
+When illustrative examples, synthetic data, or simplified models are used, label them appropriately and ensure they do not contradict the canonical content.
+
+### Content review gate
+
+Review the canonical content before detailed interaction design.
+
+Check:
+
+- Is it factually or conceptually correct?
+- Does it actually satisfy the learning objective?
+- Is the explanation complete enough for the intended learner?
+- Is the depth appropriate?
+- Are prerequisites missing?
+- Are important distinctions collapsed?
+- Are examples representative rather than misleading?
+- Are misconceptions and boundary cases handled where they materially affect understanding?
+- Does the content introduce claims not supported by the source or agreed scope?
+- Is there unnecessary content that does not support the curriculum?
+
+When the user is actively co-designing the course, discuss material content changes before treating them as final.
+
+Do not use polished interaction to hide unresolved content.
+
+### Canonical content vs. presentation copy
+
+Keep these separate.
+
+**Canonical content** answers:
+
+> What does this lesson need to communicate accurately?
+
+**Presentation / learning copy** answers:
+
+> What should the learner see at this moment in the interactive experience?
+
+Presentation copy includes:
+
+- slide/stage titles;
+- opening questions;
+- short explanations;
+- labels;
+- button text;
+- prompts;
+- feedback;
+- revealed terminology;
+- summaries;
+- transfer-exercise instructions.
+
+Presentation copy may:
+
+- shorten;
+- split;
+- reorder locally;
+- delay a definition;
+- turn a statement into a question;
+- reveal an explanation after interaction.
+
+It must NOT:
+
+- change the meaning of canonical content;
+- remove a qualification that materially changes correctness;
+- introduce unsupported certainty;
+- replace a precise concept with a catchy but misleading phrase.
+
+### Write copy after the interaction purpose is known
+
+Do not fully polish all screen copy before the storyboard exists.
+
+First determine:
+
+- what the learner sees;
+- what they can do;
+- what changes;
+- what they should notice;
+- what explanation is needed at that point.
+
+Then write the presentation copy to support that interaction.
+
+This avoids producing a text-heavy lesson and then adding decorative controls around it.
+
+### Copy review
+
+Before implementation or final content handoff, review presentation copy against canonical content.
+
+Check:
+
+- Is the wording accurate?
+- Is it concise without losing necessary meaning?
+- Does the question invite the intended observation or reasoning?
+- Does feedback explain the consequence rather than merely say correct/incorrect?
+- Is terminology introduced at an understandable moment?
+- Is repeated explanation removable because the visualization already shows it?
+- Does each label describe what the learner can actually observe or do?
+- Does the final summary match what the interaction demonstrated?
+
+### Content changes after implementation
+
+UI approval does not freeze the learning copy.
+
+If interaction behavior and visual structure are accepted but wording still needs work:
+
+1. preserve the validated interaction unless the content correction requires structural change;
+2. revise canonical content first when the underlying explanation changes;
+3. update presentation copy from that revised content;
+4. re-check that visuals and interaction still support the revised meaning.
+
 ## Default teaching rhythm
 
 A useful default is:
