@@ -23,6 +23,147 @@ Do not assume the subject is software, AI, Agent, or System Design unless the so
 11. Preserve the source material's terminology, framing, scope, and uncertainty. Do not invent missing facts or silently replace the source with generic knowledge.
 12. The interaction format must follow the learning problem; do not force every topic into a system diagram, simulator, or the same component set.
 
+## Learning intent and source roles
+
+The learner does not need to know what the curriculum should contain.
+
+A valid request may be as little as:
+
+> I want to understand this topic. I do not know what I need to learn yet.
+
+Do not make subject-matter knowledge a prerequisite for using this skill.
+
+The user's primary responsibility is to communicate learning intent when they can, such as:
+
+- why they want to learn the topic;
+- what they hope to understand or be able to do;
+- what they already know;
+- what currently confuses them;
+- desired depth, time, or scope;
+- whether they have materials they want used.
+
+If the user cannot answer some of these, proceed by proposing reasonable assumptions and make the intended level and scope visible for confirmation.
+
+### Source and reference roles
+
+User-provided material is welcome and may serve different roles. Determine the intended role before treating material as authoritative course content.
+
+A source may be:
+
+#### Source-constrained
+
+The user explicitly requires the course to use only specified material.
+
+Rules:
+
+- do not add outside subject matter as if it came from the supplied sources;
+- identify gaps that prevent a learning objective from being supported;
+- ask permission before expanding beyond the source boundary when expansion is needed;
+- outside sources may be used only for tasks the user explicitly permits, such as verification, and must not silently expand the curriculum.
+
+#### Source-led
+
+The supplied material is the primary content basis.
+
+Rules:
+
+- preserve its framing, terminology, and scope where appropriate;
+- use outside reliable sources to verify or fill necessary background when allowed;
+- clearly distinguish meaningful additions or corrections from the source's own claims.
+
+#### Source-informed
+
+The supplied material is one useful reference among others.
+
+Rules:
+
+- synthesize it with other appropriate sources;
+- do not privilege it merely because the user supplied it;
+- retain useful unique examples or framing when they support the learning goal.
+
+#### Open research
+
+The user supplies no required content source, or explicitly allows independent research.
+
+Rules:
+
+- identify appropriate reliable sources for the subject;
+- build the subject model and canonical content from those sources;
+- choose sources appropriate to the learner's level and the claims being taught.
+
+#### Presentation reference
+
+The material is provided only as a reference for:
+
+- visual style;
+- illustration approach;
+- interaction pattern;
+- information design;
+- teaching rhythm;
+- tone or presentation.
+
+Do not treat a presentation reference as evidence for subject-matter claims unless the user also assigns it a content-source role.
+
+### Mixed roles
+
+A project may use several roles at once.
+
+Example:
+
+> Use Course A as the primary content source, Articles B and C as supplemental references, and Book D only as a diagram-style reference.
+
+Track these roles separately throughout curriculum, content, and interaction design.
+
+If the user's intent is ambiguous and the distinction would materially change the course, clarify the role rather than assuming.
+
+## Subject understanding and research
+
+Before curriculum design, establish enough subject understanding to design the learning path responsibly.
+
+This responsibility belongs primarily to the skill, not to the learner.
+
+Depending on source mode:
+
+- read and synthesize user-provided materials;
+- identify the source's conceptual structure;
+- research reliable outside sources when allowed or needed;
+- identify prerequisite concepts;
+- distinguish core ideas from examples and supplementary detail;
+- identify major disagreements, uncertainty, or competing frameworks when relevant;
+- identify likely misconceptions or boundary cases;
+- note gaps that affect the requested learning outcome.
+
+The result is an internal **subject model** used to design the curriculum and canonical content.
+
+The subject model does not need to be shown in full to the user. Surface the parts needed to explain curriculum choices, scope, uncertainty, or source limitations.
+
+### Subject-matter validation vs. learner confirmation
+
+Do not ask a novice learner to certify that course content is complete or correct.
+
+Separate two responsibilities.
+
+**Subject-matter validation** is performed through sources and reasoning. It asks:
+
+- Is the content accurate?
+- Is it sufficiently complete for the learning objective?
+- Are important distinctions preserved?
+- Are claims supported?
+- Are prerequisites accounted for?
+- Are uncertainties or disagreements represented appropriately?
+- Does a simplification remain correct?
+
+**Learner-intent confirmation** belongs to the user. It asks:
+
+- Is this what you want to learn?
+- Is this scope useful?
+- Is the planned depth appropriate?
+- Is part of this already familiar?
+- Is there an area you want to emphasize or omit?
+- Are the examples or applications relevant to your goal?
+
+When presenting a curriculum to a novice, explain what the proposed scope will enable them to understand or do and what it intentionally leaves out. Do not ask them whether the subject coverage is academically complete.
+
 ## Curriculum planning with the Pyramid Principle
 
 Interactive design begins only after the learning structure is sufficiently clear.
