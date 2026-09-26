@@ -2,7 +2,7 @@
 
 ## 中文
 
-`learning-map` 是一套製作**互動式學習教材**的通用 Skill。
+`learning-map` 是一套製作**以互動式簡報為主、可混搭閱讀文本**的通用學習教材 Skill。
 
 你可以只從一句「我想學 X」開始。它會協助：
 
@@ -105,7 +105,9 @@ Learning Handoff 讓新的對話或 Agent 可以快速接續學習，不必把�
 
 Skill 會依指定來源或可靠研究建立 Subject Model，負責內容正確性、必要完整性與先備知識；使用者主要確認學習方向、範圍、深度與想強調的內容。
 
-教材內容確認後，再依概念選互動方式，例如：
+教材內容確認後，再判斷每一段最適合用互動、視覺、閱讀、練習或 transfer 呈現。預設以互動式簡報作為主體；當完整解釋、背景、證據、推導、限制或參考資訊用文字更清楚時，可以在同一個 HTML 課程中加入閱讀文本。
+
+例如：
 
 | 學習內容 | 可能的互動 |
 | --- | --- |
@@ -116,8 +118,24 @@ Skill 會依指定來源或可靠研究建立 Subject Model，負責內容正確
 | 證據／解讀 | Evidence Explorer |
 | 決策／取捨 | Scenario、Design Comparison |
 | 程序／技能 | Guided Practice |
+| 完整解釋／背景／推導 | Focused Reading |
+| 證據限制／來源脈絡 | Reading + Evidence Explorer |
 
-目標是讓互動本身幫助理解，而不是在傳統投影片上增加按鈕。
+目標是讓互動本身幫助理解，也讓閱讀文本承擔它更適合的工作。不要為了維持「互動感」把文章切成大量點擊揭露；也不要把可以操作理解的內容全部退回長文。
+
+一個單元可以混搭：
+
+```text
+情境／問題
+→ 互動觀察
+→ 結果或差異出現
+→ 閱讀：解釋機制、背景或限制
+→ 回到互動調整另一個條件
+→ Transfer
+→ 可重用原則
+```
+
+所有形式最後都做在同一套 HTML 教材體驗中。
 
 ## Fork 後個人化學習
 
@@ -150,7 +168,7 @@ Agent 可以根據實際學習回饋，在自己的 fork 增加案例、改寫�
 
 ## English
 
-`learning-map` is a general-purpose skill for creating **interactive learning materials**.
+`learning-map` is a general-purpose skill for creating **presentation-first learning materials that can mix interaction with focused reading**.
 
 Start with a topic:
 
@@ -163,7 +181,7 @@ Learning intent
 → Sources / research
 → Pyramid-based curriculum
 → Canonical content
-→ Interaction design
+→ Mixed-mode presentation / interaction design
 → Implementation and QA
 ```
 
