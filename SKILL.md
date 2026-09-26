@@ -7,7 +7,7 @@ description: Turn a learning topic into an interactive deck through source-groun
 
 ## Purpose
 
-Turn a topic into an interactive learning deck that teaches through observation, manipulation, comparison, simulation, and guided discovery rather than long-form exposition.
+Turn a topic into a presentation-first learning experience. Use interactive presentation as the default teaching surface, and add focused reading text when a concept needs sustained explanation, argument, background, source interpretation, or reference detail that interaction should not be forced to carry.
 
 This skill is topic-agnostic. It can be used for technical subjects, science, humanities, language learning, professional training, conceptual models, processes, systems, and other subjects where interaction can make the material easier to understand.
 
@@ -18,15 +18,17 @@ Do not assume the subject is software, AI, Agent, or System Design unless the so
 1. One focused topic should usually become one independent interactive deck.
 2. Start from a concrete question, phenomenon, task, tension, example, or situation instead of a glossary definition when the subject allows it.
 3. Keep one focal learning problem visible at a time.
-4. Prefer meaningful interaction, visual change, comparison, simulation, spatial relationships, and progressive disclosure over explanatory paragraphs.
-5. Let the learner observe or experience something before naming the concept when practical.
-6. Every interaction must serve a learning purpose. It should change what the learner can observe, compare, infer, construct, or test.
-7. Do not add interaction only for decoration.
-8. Do not use scores, locks, badges, completion gates, or game-like progression unless explicitly requested.
-9. Keep prose concise. Let the visual or interactive representation carry as much explanation as the subject permits.
-10. Do not reveal the entire conceptual structure up front when progressive discovery would teach it better.
-11. Preserve the source material's terminology, framing, scope, and uncertainty. Do not invent missing facts or silently replace the source with generic knowledge.
-12. The interaction format must follow the learning problem; do not force every topic into a system diagram, simulator, or the same component set.
+4. Use interactive presentation as the default course form. Prefer meaningful interaction, visual change, comparison, simulation, spatial relationships, and progressive disclosure when they improve understanding.
+5. Reading is a valid secondary learning mode. Add focused reading text when complete explanation, reasoning, context, evidence, or reference detail would be clearer in prose than in interaction.
+6. Let the learner observe or experience something before naming the concept when practical.
+7. Every interaction must serve a learning purpose. It should change what the learner can observe, compare, infer, construct, or test.
+8. Do not add interaction only for decoration.
+9. Do not use scores, locks, badges, completion gates, or game-like progression unless explicitly requested.
+10. Keep presentation copy concise. Let visuals and interaction carry explanation where they are strong; let reading carry explanation where prose is the stronger medium.
+11. Do not turn reading text into many artificial clicks, cards, or animations merely to preserve an "interactive" appearance.
+12. Do not reveal the entire conceptual structure up front when progressive discovery would teach it better.
+13. Preserve the source material's terminology, framing, scope, and uncertainty. Do not invent missing facts or silently replace the source with generic knowledge.
+14. The interaction format must follow the learning problem; do not force every topic into a system diagram, simulator, or the same component set.
 
 ## Learning intent and source roles
 
@@ -472,6 +474,126 @@ If interaction behavior and visual structure are accepted but wording still need
 3. update presentation copy from that revised content;
 4. re-check that visuals and interaction still support the revised meaning.
 
+## Presentation-first mixed-mode course design
+
+The default course artifact is an HTML-based **interactive presentation**. Interaction is the primary learning surface, but it is not the only valid learning mode.
+
+Treat interaction and reading as complementary:
+
+- use interaction when the learner needs to observe change, manipulate variables, compare states, trace a process, classify examples, inspect evidence, make a decision, or practice a procedure;
+- use reading when the learner needs a sustained explanation, conceptual background, mechanism that cannot be simplified safely, source-based argument, historical or narrative context, nuanced limitations, or reference detail;
+- combine them when the strongest learning sequence is: experience first, explanation second, then application or transfer.
+
+Do not decide the mode by content length alone. Decide from the learning job.
+
+### Default priority
+
+Prefer this order when all are pedagogically suitable:
+
+1. interactive presentation;
+2. visual or diagram-led explanation;
+3. concise explanatory reading attached to the relevant stage;
+4. longer optional deep reading or reference material.
+
+A reading segment may be required, not optional, when removing it would make the lesson incomplete or misleading.
+
+### When reading text is appropriate
+
+Use focused reading text when one or more of these are true:
+
+- the learner must follow a multi-step argument or causal explanation that would become fragmented across controls;
+- source interpretation, quotation context, evidence limitations, or competing viewpoints need continuous prose;
+- prerequisites or background must be established before a meaningful interaction is possible;
+- terminology needs a precise explanation that a label or tooltip cannot safely carry;
+- the topic is primarily narrative, interpretive, historical, conceptual, or reference-oriented;
+- an interaction would only make the learner click to reveal paragraphs without changing what they can observe or reason about;
+- the learner needs a durable reference they can revisit after the interactive stage.
+
+### Reading text rules
+
+Reading text should:
+
+- live in the same HTML course experience when practical;
+- appear close to the stage or concept it supports;
+- have a clear purpose such as **Explain**, **Why this happens**, **Background**, **Evidence**, **Limitations**, or **Deep dive**;
+- preserve canonical meaning and source grounding;
+- be chunked by ideas rather than arbitrary screen size;
+- use diagrams, examples, tables, or annotations when they materially improve comprehension;
+- remain readable without requiring hover, animation, or hidden UI.
+
+Reading text should not:
+
+- duplicate what the interaction already makes clear;
+- become a dump of canonical content;
+- be split into fake interactions whose only behavior is "click to continue reading";
+- be pushed into tooltips, accordions, or modal dialogs when it is necessary for understanding;
+- be shortened so aggressively that qualifications, evidence, or reasoning are lost.
+
+### Mixed-mode unit rhythm
+
+A unit may use a sequence such as:
+
+```text
+Question / situation
+  ↓
+Interactive observation or manipulation
+  ↓
+Consequence / pattern becomes visible
+  ↓
+Focused reading: explain the mechanism, evidence, or limitation
+  ↓
+Return to the same learning surface
+  ↓
+Change another condition / compare alternatives
+  ↓
+Transfer case
+  ↓
+Concise reusable principle
+```
+
+Other valid sequences include:
+
+```text
+Short prerequisite reading
+  ↓
+Interactive presentation
+  ↓
+Explanation
+  ↓
+Practice
+```
+
+or:
+
+```text
+Interactive case
+  ↓
+Source / evidence reading
+  ↓
+Re-interpret the case
+```
+
+Do not force every unit to contain both modes. Some units may be mostly interactive; some may require more reading. The course should still feel presentation-first rather than article-first.
+
+### Storyboard requirement
+
+For every stage, explicitly classify the learning mode:
+
+- `INTERACT`
+- `VISUAL`
+- `READ`
+- `PRACTICE`
+- `TRANSFER`
+
+For a `READ` stage, record:
+
+- why prose is the appropriate medium;
+- whether the reading is required or optional;
+- what understanding it should enable before the learner continues;
+- what interaction, example, or transfer task it connects to.
+
+This prevents reading from becoming filler and prevents interaction from being added only to avoid prose.
+
 ## Default teaching rhythm
 
 A useful default is:
@@ -690,7 +812,8 @@ It demonstrates an accepted interaction rhythm and presentation-first experience
 
 General characteristics:
 
-- presentation-first rather than dashboard-first;
+- presentation-first rather than dashboard-first or article-first;
+- interactive presentation is the default surface, with focused reading embedded when prose is the stronger teaching medium;
 - one dominant learning focus per stage;
 - restrained chrome;
 - concise labels;
@@ -698,7 +821,8 @@ General characteristics:
 - clear progress/navigation;
 - responsive layout;
 - reduced-motion support;
-- avoid dense card grids and article-like scrolling unless the subject genuinely requires them.
+- avoid dense card grids and unstructured article-like scrolling;
+- when reading is required, design it as a purposeful learning segment within the course rather than treating prose as a fallback.
 
 Visual language should adapt to the subject. A history deck, language lesson, biology lesson, and software architecture lesson should not automatically look identical.
 
@@ -748,16 +872,23 @@ Use this to choose interactions.
 
 Choose the smallest set of examples needed to teach and transfer the concept.
 
-### 5. Build the interaction storyboard
+### 5. Build the mixed-mode learning storyboard
 
 For each stage define:
-- visible question;
-- initial visible state;
-- learner action or observation;
-- visual/state transition;
-- evidence or consequence revealed;
+- learning mode: INTERACT / VISUAL / READ / PRACTICE / TRANSFER;
+- visible question or purpose;
+- initial visible state or reading context;
+- learner action, observation, or reading task;
+- visual/state transition when applicable;
+- evidence, consequence, explanation, or interpretation revealed;
 - concept or explanation introduced afterward;
 - reason this stage is necessary.
+
+For READ stages, also define:
+- why prose is the appropriate medium;
+- required or optional;
+- what understanding the learner should gain before continuing;
+- what interactive, visual, practice, or transfer stage it connects to.
 
 Remove stages that only repeat information.
 
@@ -791,8 +922,10 @@ Check:
 ### 9. Review learning quality
 
 Human review should ask:
-- does the experience feel like an interactive presentation rather than a dashboard or article?
-- is there too much prose?
+- does the experience feel like a presentation-first course rather than a dashboard or an unstructured article?
+- is prose used where it improves understanding, and removed where interaction or visuals already teach the point?
+- are required reading segments complete enough to preserve reasoning, evidence, and qualifications?
+- are any paragraphs being hidden behind unnecessary clicks or pseudo-interaction?
 - can the learner see the important change?
 - does each interaction teach something?
 - is the conclusion supported by what was observed?
@@ -936,6 +1069,9 @@ Avoid:
 - one slide per learning objective;
 - large scenario counts used as a proxy for depth;
 - dashboards masquerading as lessons;
+- article dumps with no presentation structure;
+- treating all prose as a design failure;
+- fake interaction whose only purpose is to reveal the next paragraph;
 - interactions that do not change understanding;
 - explaining everything before the learner can observe it;
 - using the same visual metaphor for every topic;
