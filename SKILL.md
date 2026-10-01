@@ -123,6 +123,45 @@ Track these roles separately throughout curriculum, content, and interaction des
 
 If the user's intent is ambiguous and the distinction would materially change the course, clarify the role rather than assuming.
 
+
+## Learner baseline and scope contract
+
+Before curriculum confirmation, establish an explicit learner baseline and course scope. Keep these as separate concepts.
+
+### Learner baseline
+
+Record the relevant subset of:
+
+- **Already knows**: concepts or abilities the learner can already explain, apply, or transfer with enough confidence that the course should not reteach them.
+- **Familiar but needs support**: concepts the learner has encountered or can use partially, but still needs explanation, examples, or reinforcement.
+- **New / unfamiliar**: concepts that are outside the learner's current demonstrated baseline.
+
+Do not infer permanent ability from a single answer or self-description. Treat the baseline as a working instructional assumption that may be revised through Human Learning Review or Learning Handoff evidence.
+
+### Scope contract
+
+Before detailed curriculum work, make the intended boundaries visible:
+
+- **Learn now**: material required for the current learning outcome.
+- **Skip because already known**: material that would otherwise be prerequisite or recap, but the learner has already demonstrated sufficiently.
+- **Defer / not now**: relevant material intentionally postponed to a later course, phase, or learning goal.
+- **Out of scope**: material that may be related to the subject but is not needed for the current outcome.
+
+Do not silently expand the curriculum because a topic is adjacent, interesting, popular, or commonly taught together.
+
+When a prerequisite has been skipped because it is already known, briefly bridge back to it only when the current lesson depends on that connection.
+
+### Teaching depth by learner baseline
+
+Adapt explanation density to the learner's current baseline:
+
+- for already-known material, use a concise reminder or direct bridge;
+- for partially familiar material, explain the missing distinction, mechanism, or reasoning;
+- for material above the learner's established baseline, explain prerequisite concepts, terminology, mechanism, causal reasoning, and at least one concrete example before expecting independent application;
+- do not use unexplained advanced terminology merely because it is standard in professional documentation.
+
+When the course intentionally omits or defers a topic, say so explicitly in learner-facing scope or course notes when the omission could otherwise be confusing.
+
 ## Subject understanding and research
 
 Before curriculum design, establish enough subject understanding to design the learning path responsibly.
@@ -594,6 +633,40 @@ For a `READ` stage, record:
 
 This prevents reading from becoming filler and prevents interaction from being added only to avoid prose.
 
+
+## HTML course interface baseline
+
+The default course artifact should be a directly usable HTML learning site, not only a slide export, source document, or implementation demo.
+
+When relevant to the subject, provide:
+
+- persistent unit / chapter navigation;
+- a clear indication of the current unit or stage;
+- direct navigation to major units or sections when practical;
+- readable long-form sections for required prose;
+- code blocks with a one-click copy action when code is part of the lesson;
+- predictable back / next / restart behavior;
+- responsive layouts for desktop and mobile;
+- keyboard-accessible navigation and controls;
+- direct route / reload behavior that preserves a usable learning entry point.
+
+Do not add chapter chrome that overwhelms the learning surface. Navigation should remain visible enough to support orientation without turning the course into a dashboard.
+
+### Default visual direction
+
+Unless the user supplies a different presentation reference, prefer a clean documentation-oriented visual language comparable in density and restraint to modern developer documentation such as Vercel Docs:
+
+- strong typography and spacing;
+- clear hierarchy;
+- restrained chrome;
+- low visual noise;
+- readable code and prose;
+- focused interactive surfaces;
+- consistent navigation;
+- generous whitespace where it improves scanability.
+
+Use this as a design direction, not a branding template. Do not clone third-party logos, proprietary assets, exact typography, component styling, or pixel-level layout.
+
 ## Default teaching rhythm
 
 A useful default is:
@@ -698,6 +771,68 @@ Use:
 - reversible steps
 
 Do not use an interaction pattern merely because it is available.
+
+
+## Simulator-style interaction reference
+
+When the subject benefits from manipulation, state change, cause-and-effect exploration, or system/model reasoning, use the interaction model of:
+
+`gcake119/system-design-simulator`
+
+as a structural reference.
+
+The transferable interaction pattern is:
+
+```text
+scenario / problem
+  ↓
+persistent model or learning surface
+  ↓
+learner changes a component, relationship, parameter, state, or constraint
+  ↓
+the model updates
+  ↓
+the consequence becomes visible in the relevant place
+  ↓
+focused evidence / metrics / state indicators
+  ↓
+learner compares, explains, or revises
+  ↓
+another change / transfer
+```
+
+Prefer the following characteristics when they fit the learning problem:
+
+- persistent learning surface rather than unrelated screens;
+- manipulable model, graph, structure, timeline, process, or state representation;
+- scenario controls;
+- parameter → state consequence;
+- direct visualization of changed nodes, relations, paths, quantities, evidence, or status;
+- focused metrics or evidence rather than an all-purpose dashboard;
+- iterative experimentation;
+- visible trade-offs;
+- state persistence across stages when continuity helps understanding.
+
+Do not automatically copy from the reference:
+
+- interview scoring;
+- Architect Level;
+- unrestricted infrastructure component palettes;
+- benchmark assumptions;
+- System Design-specific terminology;
+- its exact interface, layout, or visual styling.
+
+The reference is a model for interaction behavior, not a requirement that every lesson become an architecture simulator.
+
+Translate the same interaction logic to the subject. Examples:
+
+- cybersecurity: permissions, trust boundaries, attack paths, controls, evidence;
+- AI / Agent systems: context, memory, tools, agent loop, approvals, observations;
+- process learning: steps, states, transitions, failure paths;
+- quantitative learning: variables, constraints, measurements, outcomes;
+- classification: examples, grouping rules, boundary cases, changed classifications.
+
+If the learning problem is better served by a timeline, evidence explorer, reading segment, guided task, or another interaction form, use that instead.
 
 ## Case and example selection
 
